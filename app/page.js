@@ -8,13 +8,13 @@ import { Suspense } from "react";
 export default function Home() {
   return (
     <main>
+      <Suspense fallback={<p>Loading data...</p>}>
+          <UsePromiseDemo />
+        </Suspense>
       <ClientDemo>
         <RSCDemo />
         <DataFetchingDemo />
         <ServerActionsDemo />
-        <Suspense fallback={<p>Loading data...</p>}>
-          <UsePromiseDemo />
-        </Suspense>
       </ClientDemo>
     </main>
   );
